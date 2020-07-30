@@ -1,8 +1,13 @@
-declare module 'react-native-dropdown-picker' {
-  import { ComponentType } from 'react';
- 
+declare module "react-native-dropdown-picker" {
+  import { ComponentType } from "react";
+
   type DropDownPicker = {
-    items: {label: any, value: any, icon?: () => JSX.Element, disabled?: boolean, selected?: boolean}[];
+    handlePress?: () => void;
+    customChildrenLower: any;
+    customPlaceHolder: any;
+    showCustomPlaceHolder?: boolean;
+    dropDownMaxHeight?: number;
+    // items: {label: any, value: any, icon?: () => JSX.Element, disabled?: boolean, selected?: boolean}[];
     defaultValue?: any;
     placeholder?: string;
     dropDownMaxHeight?: number;
@@ -19,7 +24,6 @@ declare module 'react-native-dropdown-picker' {
     arrowColor?: string;
     arrowSize?: number;
     showArrow?: boolean;
-    scrollViewProps?: Object;
     customArrowUp?: (size: number, color: string) => JSX.Element;
     customArrowDown?: (size: number, color: string) => JSX.Element;
     customTickIcon?: () => JSX.Element;
